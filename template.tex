@@ -1,0 +1,370 @@
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[a4paper,10pt]{report}
+\usepackage{amsmath,amssymb,graphicx,titlesec,epstopdf,xcolor,hyperref,tikz,tabularray,sectsty,relsize,moresize,xstring,etoolbox}
+\usepackage[total={6.5in,8.75in},top=3cm,left=3cm,right=3cm,bottom=2cm,includefoot,centering]{geometry}
+\usepackage{fancyhdr,ragged2e}
+\usepackage{array,vcell}
+\usepackage{lastpage}
+\usepackage[utf8]{inputenc}
+\usepackage{flafter}
+\usepackage[bottom]{footmisc}
+\usepackage{attachfile}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{datetime}
+\usepackage{datatool}
+\usepackage[object=vectorian]{pgfornament}
+\usepackage{currfile}
+\usepackage{lmodern}
+\usepackage{wela,calligra,wedn,cascadia-code}
+\usepackage[T1]{fontenc}
+%\renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
+\usetikzlibrary{arrows,snakes,backgrounds,arrows.meta,chains,positioning,quotes,shapes.symbols,patterns,matrix,er,shapes,fit}
+\captionsetup{compatibility=false}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    }
+\urlstyle{same}
+\DeclareListParser{\MyListParser}{|}
+\begin{filecontents*}[overwrite]{projects.csv}
+prj,isn,iss,apn,aps,dcn,rev,dat,bpa,prf,vts,utl
+pcsccpdbril-bapc,Pampa Chakraborty,graphics/lspl156,Santanu Dutta,graphics/lspl272,Q-01/01,02,2024-01-04,Debashis Roy Chowdhury,src/pdf-xml.tikz,Advanced PDF Tools v2.0\\Splitting Tool\\Garbage Checker\\Book XML Parser\\BRIL-BAPC XMLPDF Validation Tool v1.2\\Spelling Checker\\Console4.exe (LSPL -- Internal Tool),$-$
+pcsccxmatla-seng,Somnath Das,graphics/lspl284,Santanu Dutta,graphics/lspl272,Q-01/02,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Garbage Checker\\JATS1.1 Parser\\XML Viewer through LSPL Internal Stylesheet,$-$
+pcsccxmjosp-atyp,Debabrata De,graphics/lspl007,Santanu Dutta,graphics/lspl272,Q-01/03,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Garbage Checker\\ATYPON Parser\\JATS1.2 Parser\\XML Viewer through LSPL Internal Stylesheet,$-$
+pcsccxmkbnl-dxml,Sukhendu Pal,graphics/lspl011,Santanu Dutta,graphics/lspl272,Q-01/04,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,DBNL Parsing v1.02\\DBNL Edit\\XMLViewer\\Spellchecker\\GarbageCharCheck\\DBNL-XMLOutput,For~XML~parsing\\Error~reporting~tool\\Tool~for~browser~view~checking\\For~spell~checking\\Garbage~checking~tool\\Delivery~preparation~tool
+pcsccxmoxup-jbac,Somnath Das,graphics/lspl284,Santanu Dutta,graphics/lspl272,Q-01/05,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Console4.exe (LSPL-Internal Tool)\\Garbage Checker\\SCJATS Parser 2020 v1.24\\Oxford Issue Meta Packaging v20221108\\SCJATS Parser\\Issue-Meta 2020 v1.24\\OxfordEdit v20,$-$
+pcsccxmtayf-reme,Samir Uddin Ahmed,graphics/lspl281,Santanu Dutta,graphics/lspl272,Q-01/06,02,2024-01-04,Debashis Roy Chowdhury,src/xml-epub.tikz,Garbage Checker\\Parser Checker\\XML Metadata v1.43\\TFBITS Val Tool v2.0.1\\Reference Structure and Linking Utility\\Image Cropping\\XML Stylesheet\\ePub Checker 5.1.0,$-$
+pcsccxmucls-texw,Debabrata De,graphics/lspl007,Santanu Dutta,graphics/lspl272,Q-01/07,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Garbage Checker\\JATS1.2 OASIS Parser\\XML Viewer through LSPL Internal Stylesheet,$-$
+pcsccxmcose-afri,Upendra Shaw,graphics/lspl019,Santanu Dutta,graphics/lspl272,Q-01/08,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,\href{https://www.ncbi.nlm.nih.gov/pmc/tools/xmlchecker/}{Online XML Validator}\\\href{https://www.ncbi.nlm.nih.gov/pmc/tools/stylechecker/}{PMC Style Checker}\\\href{https://www.ncbi.nlm.nih.gov/pmc/tools/article-previewer/}{PMC Article Previewer}\\Excel Pattern Replacer 1.0.exe (LSPL Inhouse tool),$-$
+pcsccxmspgb-olch,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,Q-01/09,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
+pcsccxmspbv-copb,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,Q-01/10,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
+pcsccxmspbv-russ,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,Q-01/11,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
+pcsccxmspgb-olru,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,Q-01/12,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
+pcsccxmspus-hebr,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,Q-01/13,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
+pcsccxmlnau-epub,Sujan Mistry,graphics/lspl012,Santanu Dutta,graphics/lspl272,Q-01/14,02,2024-01-04,Debashis Roy Chowdhury,src/epub.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
+template,Sukhendu Pal,graphics/lspl011,Santanu Dutta,graphics/lspl272,Q-01/04,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,DBNL Parsing v1.02\\DBNL Edit\\XMLViewer\\Spellchecker\\GarbageCharCheck\\DBNL-XMLOutput,$-$
+pcsccxmtayf-ebkc,Somnath Das,graphics/lspl284,Santanu Dutta,graphics/lspl272,Q-02/07,02,2024-07-24,Debashis Roy Chowdhury,src/xml.tikz,Garbage Checker\\Parser Checker\\XML Metadata\\TFBITS Val Tool\\Reference Structure\\Linking Utility\\Image Cropping\\XML Stylesheet,$-$
+\end{filecontents*}
+\DTLloaddb
+  [keys={prj,isn,iss,apn,aps,dcn,rev,dat,bpa,prf,vts,utl}]% <options>
+  {projects}% <db name>
+  {projects.csv}% <filename>
+\edef\myjob{\expandafter\scantokens\expandafter{\jobname\noexpand}}
+\makeatletter
+\newcommand{\mytest}[1]{\begingroup%
+  \def\@tempa{#1}%
+%  \expandafter\def\expandafter\@tempa\expandafter{\detokenize{#1}}%
+  \meaning\@tempa\par%
+  \meaning\myjob\par%
+  \ifx\@tempa\myjob%
+    YES%
+  \else%
+    NO%
+  \fi%
+\endgroup}
+\makeatletter
+\let\pgffor@dotsscanend@original=\pgffor@dotsscanend
+\def\pgffor@setdelimiter#1{%
+  \def\pgffor@emptyvalues{#1 \pgffor@stop#1}%
+  \def\pgffor@normal@list##1{%
+    \def\pgffor@values{##1#1 \pgffor@stop#1}%
+    \ifx\pgffor@values\pgffor@emptyvalues
+      \def\pgffor@values{\pgffor@stop#1}%
+    \fi%
+    \let\pgffor@body=\pgfutil@empty%
+    \global\pgffor@continuetrue%
+    \pgffor@collectbody}%
+  \def\pgffor@scanround(##1)##2#1{\def\pgffor@value{(##1)##2}\pgffor@scanned}%
+  \def\pgffor@scanone##1#1{\def\pgffor@value{##1}\pgffor@scanned}%
+  \def\pgffor@dotsscanend##1#1{\pgffor@dotsscanend@original##1,}%
+}
+\pgfkeys{/pgf/foreach/delimiter/.code=\pgffor@setdelimiter{#1}}
+\ExplSyntaxOn
+
+\NewDocumentCommand{\Foreach}{ m O{,} m}
+ {
+  \__foreach_main:nn { #1 } { #2 } { #3 }
+ }
+
+\seq_new:N \l__foreach_arg_seq
+\clist_new:N \l__foreach_braced_clist
+
+\cs_new_protected:Npn \__foreach_main:nn #1 #2 #3
+ {
+  \seq_set_split:Nnn \l__foreach_arg_seq { #2 } { #3 }
+  \clist_clear:N \l__foreach_braced_clist
+  \seq_map_inline:Nn \l__foreach_arg_seq
+   {
+    \clist_put_right:Nn \l__foreach_braced_clist { { ##1 } }
+   }
+  \foreach #1 in~\l__foreach_braced_clist
+ }
+\ExplSyntaxOff
+\newcommand*{\thevalue}{}
+\newcommand*{\getValue}[2]{%
+  \DTLgetvalueforkey{\thevalue}{#1}{projects}{prj}{#2}%
+  \thevalue
+}
+\newcommand*{\getKey}[1]{%
+  %\makeatletter
+  \DTLgetvalueforkey{\thevalue}{#1}{projects}{prj}{\myjob}%
+  %\makeatother
+  \thevalue
+}
+\newcommand{\iss}{\getKey{iss}}
+\newcommand{\aps}{\getKey{aps}}
+\newcommand{\xx}[2]{%
+  \DTLgetvalueforkey{\temp}{#2}{projects}{prj}{\myjob}%
+  \global\let#1\temp
+}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\textrm}{\textt}
+\raggedbottom
+\setcounter{secnumdepth}{4}
+\definecolor{my_color}{cmyk}{250, 0, 0, 0.80}
+\definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
+\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+\definecolor{awesome}{rgb}{1.0, 0.13, 0.32}
+\definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
+\title{\Huge \bf \MakeUppercase{\jobname} \\ {\LARGE Q}{\large UALITY}~{\LARGE P}{\large LAN}\vspace{4in}}
+\author{
+\begin{small}
+%\setlength{\tabcolsep}{2pt}
+%\renewcommand\arraystretch{1}
+\begin{tabular}{|m{2cm}|m{7cm}|m{2cm}|m{2cm}|m{1cm}}
+\hline
+Issued by: & \multicolumn{3} {|l} {\getKey{isn}} & \multicolumn{1} {l|}{}\\
+\hline
+\multicolumn{1} {|m{2cm}|} {\vspace{2pt}Signature:} & \multicolumn{2} {|p{10cm}} {\xx{\mygraphic}{iss}\includegraphics[width=5cm]{\mygraphic}} & \multicolumn{2} {l|}{}\\
+%%Signature: & \multicolumn{3} {|l|} {\wela \getKey{isn}} \\
+\hline
+\multicolumn{1} {|m{2cm}|} {Approved by:} & \multicolumn{1} {|m{8.25cm}|} {\getKey{apn}} & \multicolumn{1} {|p{0.75cm}|}{Date:} & \multicolumn{1} {|m{2cm}}{\getKey{dat}} & \multicolumn{1} {l|}{}\\
+\hline
+\multicolumn{1} {|m{2cm}|} {\vspace{2pt}Signature:} & \multicolumn{4}{|p{10cm}|} {\xx{\mygraphic}{aps}\includegraphics[width=5cm]{\mygraphic}} \\
+%%Signature: & \multicolumn{3}{|l|} {\calligra \getKey{apn}} \\
+\hline
+\end{tabular}
+\end{small}
+}
+%\includegraphics[width=5cm]
+\date{}
+\titleformat{\chapter}[display]
+  {\color{green3}\normalfont\bfseries}{}{0pt}{\Huge}
+\sectionfont{\color{teal5}}  % sets colour of sections
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+\fancyhead[C]{%
+          \begin{tabular}{|m{0.3\textwidth}|m{0.5\textwidth}|m{0.2\textwidth}|}
+          \hline
+          \vspace{2pt}
+          \includegraphics[height=0.5cm,width=0.5cm]{graphics/logo.png}~{\large \bf\color{dodgerblue}{Learning}~\color{tealgreen}{Spiral}}&
+          \centering
+          {\bf\color{awesome}{\MakeUppercase{\jobname}~PROJECT}} &
+          \centering
+          \tiny{\color{darkmagenta}{Doc. No.: \getKey{dcn}\\
+                Date: \getKey{dat}\\
+                Rev. \getKey{rev}\\
+                Page \thepage\ of }\pageref{LastPage}}\tabularnewline
+          \hline
+          \end{tabular}%
+}
+\fancypagestyle{plain}{%
+\fancyhead[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+   \fancyhead[C]{%
+          \begin{tabular}{|m{0.3\textwidth}|m{0.5\textwidth}|m{0.2\textwidth}|}
+          \hline
+          \vspace{2pt}
+          \includegraphics[height=0.5cm,width=0.5cm]{graphics/logo.png}~{\large \bf\color{dodgerblue}{Learning}~\color{tealgreen}{Spiral}}&
+          \centering
+          {\bf\color{awesome}{\MakeUppercase{\jobname}~PROJECT}} &
+          \centering
+          \tiny{\color{darkmagenta}{Doc. No.: \getKey{dcn}\\
+                Date: \getKey{dat}\\
+                Rev. \getKey{rev}\\
+                Page \thepage\ of }\pageref{LastPage}}\tabularnewline
+          \hline
+          \end{tabular}%
+           }
+}
+\color{my_color}
+%\thispagestyle{plain}
+
+\begin{document}
+
+
+
+%\pagecolor{yellow!20}
+\maketitle
+\clearpage
+\begin{minipage}{\textwidth}
+\thispagestyle{fancy}
+\vfill
+\tableofcontents
+\end{minipage}
+
+\thispagestyle{fancy}
+
+\chapter{Quality Plan}
+\label{chap:title}
+
+
+%\show\thevalue
+
+\section{Objectives}
+\label{sec:o}
+\begin{enumerate}
+\item To establish a quality plan for the \MakeUppercase{\jobname} Project.
+\item To serve as a guide of the quality personnel in performing quality related tasks.
+\end{enumerate}
+
+\section{Scope}
+\label{sec:s}
+\indent This document is applicable for \MakeUppercase{\jobname} project.
+
+\section{Responsibilities}
+\label{sec:r}
+
+\begin{enumerate}
+\item It is the responsibility of the Project In-charge (\textbf{\getKey{isn}}) and Quality team to ensure the procedure specifies in this document is regularly being followed by the team.
+\item Business Process Analyst (\textbf{\getKey{bpa}}), Project Officer (\textbf{\getKey{apn}}), and Team Leader (\textbf{\getKey{isn}}) are responsible in cascading the procedure to production team members are handling this project.
+\end{enumerate}
+
+\section{Process Flow}
+\label{sec:pf}
+
+\begin{tiny}
+%\input{\myjob.tikz}
+%\input{\getKey{prf}.tikz}
+\xx{\mygraphic}{prf}\input{\mygraphic}
+\end{tiny}
+
+
+\section{Quality Assurance Procedure}
+\label{sec:qap}
+
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.25\textwidth}|m{0.75\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Process} & \textbf{Deliverables} \\
+Inspection methodology & {100\% inspection of deliverables and compliant to the requirements \\ \textbf{Output:} Inspection report and error free validation report} \\
+Historical Data -- Data collection and analysis & {Internal evaluation using QMS tool and external feedback database \\ \textbf{Output:} QC inspection Report and Quality Feedback Reports \\ Regular monitoring and evaluation of all QC Inspectors to maintain the integrity of Quality Assurance process \\ \textbf{Output:} Certified QA/QC personnel}\\
+Feedback management and monitoring & {Feedback items are monitored through External Feedback Database for the client feedback with appropriate investigation and corrective action. \\ \textbf{Output:} Weekly and monthly analysis of feedback reports} \\
+Verification of all process documentations & {All documented procedures are approved and updated. \\ \textbf{Output:} Approved and updated Documentations shared accross all team members working in \MakeUppercase{\jobname} project.} \\
+\end{tblr}
+\end{tiny}
+
+
+\section{Quality Standards}
+\label{sec:qs}
+
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.2\textwidth}|m{0.3\textwidth}|m{0.1\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Factor} & \textbf{Formula} & \textbf{Standard Target} \\
+Character Accuracy & $\frac{\sf (\char"0023\ of\ Sampled\ Character - \char"0023\ of\ Character\ in\ error)}{\sf \char"0023\ of\ sampled\ Character}$ & 99.995\% \\
+%Critical Error Rate & $\frac{\sf \char"0023\ of\ Critical\ Error}{\sf \char"0023\ of\ Document}$ & See Below \\
+Structure / Coding Accuracy & -- & 100\% \\
+Image Accuracy & -- & 100\% \\
+Proofreading Accuracy & -- & 100\% \\
+Validation reports / logs & -- & Error Free \\
+Folder Structure \& File Naming & -- & Error Free \\
+\end{tblr}
+\end{tiny}
+
+
+\section{Quality Control Procedures}
+\label{sec:qcp}
+
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.12\textwidth}|m{0.25\textwidth}|m{0.12\textwidth}|m{0.1\textwidth}|m{0.15\textwidth}|m{0.2\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Process} & \textbf{Quality Control Activities} & \textbf{Acceptance Criteria} & \textbf{Owner} & \textbf{Tools} & \textbf{Description / Requirements}\\
+{Pre-Production} & {Ensure completeness of the receipt files.} & 100\% complete & Processing staff & {Email\\WinSCP\\Salamander} & {Communication~with~client\\sFTP~tool~for~downloading\\FTP~tool~for~downloading} \\
+{Production} & {Checking visual rendation of coded files in browser by linking to an XSL file, to catch tagging or image related errors easily. Using spell-checkers to ensure content with paramount quality. Validation tools ensure files adhere to the requirements.} & 100\% complete & Processing staff & {FineReader\\Photoshop\\Epsilon\\oXygen XML Editor\\\getKey{vts}} & {Text~extraction~tool\\Image~cropping~tool\\EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}} \\
+{Quality Control} & {Multiple levels of checkings ensure paramount quality. Otherwise files push back to the production team for modification.} & 100\% complete & QC Inspector & {Epsilon\\oXygen XML Editor\\\getKey{vts}} & {EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}} \\
+{Post-Production} & {Directory structures, file namings, must be as per delivery protocol, confirmed by client. Archive and backup.} & 100\% complete & Processing staff & {Email\\WinSCP\\Salamander\\QMS} & {Communication~with~client\\sFTP~tool~for~uploading\\FTP~tool~for~uploading\\Online~tool~for~tracking} \\
+%Inventory & Check completeness of received files and materials & 100\% complete & Processing staff & - & Complete source documents \\
+%Quality Checking & Checking converted file & {Quality: See Section~\ref{sec:pf} \\Reports / Logs: Error free} & QC Inspector & QMS & {Compliance to conversion instruction and SLA requirement} \\
+%{Delivery Preparation Process} & -- & {Folder Structuring: 100\%\\Filenaming: 100\%} & QC Inspector & Folder Structuring & Compliance to SLA requirements \\
+%Delivery & -- & -- & Processing staff & {WinSCP\\FileZilla\\Altep Salamander} & {Successfully uploaded to client sFTP} \\
+\end{tblr}
+\end{tiny}
+
+
+\section{Process Tools}
+\label{sec:pt}
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.12\textwidth}|m{0.12\textwidth}|m{0.1\textwidth}|m{0.2\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Category} & \textbf{Applications} & \textbf{Remarks} & \textbf{Description} \\
+Pre-Production Tools & {Email\\WinSCP\\Salamander} & Tool / Automated & {Communication~with~client\\sFTP~tool~for~downloading\\FTP~tool~for~downloading} \\
+%%Validation Tools & {- Advanced PDF Tools v2.0 \\ - Splitting Tool \\ - Garbage Checker \\ - Book\_XML\_Parser \\ - BRIL-BAPC\_XMLPDF Validation Tool\_V1.2 \\ - Spelling Checker \\  Console4.exe (LSPL -- Internal Tool)} & User / Manual & Error Free Reports/Logs \\
+%Validation Tools & {\Foreach{\x}{|}{\getKey{vts}}{- \x\\}  & User / Manual & Error Free Reports/Logs \\
+%Validation Tools & {\foreach \x [delimiter=|] in {\getKey{vts}} {- \x\\} } & User / Manual & Error Free Reports/Logs \\
+%Validation Tools & {\renewcommand*{\do}[1]{- #1\\}\MyListParser{\getKey{vts}}} & User / Manual & Error Free Reports/Logs \\
+%Validation Tools & {\getKey{vts}} & User / Manual & Error Free Reports/Logs \\
+Production Tools & {FineReader\\Photoshop\\Epsilon\\oXygen XML Editor\\\getKey{vts}} & User / Manual & {Text~extraction~tool\\Image~cropping~tool\\EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}} \\
+Uploading Tools & {Email\\WinSCP\\Salamander} & Tool / Automated & {Communication~with~client\\sFTP~tool~for~downloading\\FTP~tool~for~downloading} \\
+\end{tblr}
+\end{tiny}
+
+
+
+
+\section{Client Feedback Handling}
+\label{sec:cfh}
+\noindent The Client Complaint Handling Process has been set-up with the sole objective of ensuring all client complaints, issues, and concerns are immediately acknowledged, Action are taken to resolved them in timely manner and satisfactorily complete the communication protocol with the client -- while ensuring the errors or issues will not repeated.
+
+\noindent
+\begin{tiny}
+\begin{tblr}[!h]{colspec={|p{0.65\textwidth}|p{0.25\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Process} & \textbf{Timeline} \\
+Client Feedback Investigation & With 24 hours upon receipt of the feedback \\
+Generation of Corrective and Preventive Action & With 24 hours upon receipt of the feedback \\
+{Communicate with client with regards to the result of the investigation as well as provide the CAPA for the particular feedback} & With 24 hours upon receipt of the feedback \\
+Monitoring of Corrective and Preventive Action & 1-3 months after implementation of CAPA \\
+Closure of Corrective and Preventive Action & After 3 months monitoring period
+\end{tblr}
+\end{tiny}
+
+
+
+\section{Definition of Terms}
+\label{sec:dot}
+
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.05\textwidth}|m{0.17\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Term} & \textbf{Definition} \\
+QMS & Quality Management System \\
+IR & Inspection Report \\
+TL & Team Leader \\
+QCI & Quality Control Inspector \\
+SLA & Service Level Agreement \\
+CAPA & Corrective and Preventive Action
+\end{tblr}
+\end{tiny}
+
+\section{Revision History}
+\label{sec:rh1}
+
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.1\textwidth}|m{0.1\textwidth}|m{0.1\textwidth}|m{0.15\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Revision State} & \textbf{Revision Date} & \textbf{Author} & \textbf{Revision Description} \\
+\getKey{rev} & \getKey{dat} & \getKey{apn} & Initial release
+\end{tblr}
+\end{tiny}
+
+
+\section{Review History}
+\label{sec:rh2}
+\begin{tiny}
+\begin{tblr}{colspec={|m{0.1\textwidth}|m{0.1\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\textbf{Reviewed by} & \textbf{Review Date} \\
+\getKey{apn} & \getKey{dat}
+\end{tblr}
+\end{tiny}
+
+
+
+\end{document}
+
