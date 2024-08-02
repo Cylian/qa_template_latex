@@ -62,31 +62,31 @@
 
 %floats
 
-\node[color=red,align=left] at (0.3,3.9)  {Input~scanning\\for~missing,\\or~incomplete\\data~received\\~\\~\\~\\~\\Inform~client\\once~incomplete\\data~received,\\ensures~production\\team~works~only\\on~100\%~Complete\\data};
-%\node[color=red,align=left] at (0.3,3.7)  {To~ensure\\~100\%~completeness};
-\node[color=red,align=left] at (0.2,2.5)  {100\%~Compliant\\as~per~project\\requirements};
-\node[color=red,align=left] at (0.3,1.75) {Error~free~reports};
-\node[color=red,align=left] at (0.3,0)    {QC~includes~100\%\\sampling~of~output\\data~for~possible\\errors};
-\node[color=red,align=left] at (0.3,-1)   {Error~free~files\\ready~for~delivery};
-\node[color=red,align=left] at (0.3,-2)   {Archive~and~backup};
+\node[color=black,align=left] at (0.3,3.9)  {Input~scanning\\for~missing,\\or~incomplete\\data~received\\~\\~\\~\\~\\Inform~client\\once~incomplete\\data~received,\\ensures~production\\team~works~only\\on~100\%~Complete\\data};
+%\node[color=black,align=left] at (0.3,3.7)  {To~ensure\\~100\%~completeness};
+\node[color=black,align=left] at (0.2,2.5)  {100\%~Compliant\\as~per~project\\requirements};
+\node[color=black,align=left] at (0.3,1.75) {Error~free~reports};
+\node[color=black,align=left] at (0.3,0)    {QC~includes~100\%\\sampling~of~output\\data~for~possible\\errors};
+\node[color=black,align=left] at (0.3,-1)   {Error~free~files\\ready~for~delivery};
+\node[color=black,align=left] at (0.3,-2)   {Archive~and~backup};
 
 
-\node[color=red,align=left] at (1.3,4)    {Ensure~completeness\\of~the~receipt~files};
-\node[color=red,align=left] at (1.3,1.85) {Checking~visual\\rendation~of~coded\\files~in~browser\\by~linking~to~an~XSL\\file,~to~catch\\tagging~or~image\\related~errors\\easily\\~\\~\\Using~spell-checkers\\to~ensure~content\\with~paramount\\quality\\~\\~\\Validation~tools\\ensure~files~adhere\\to~the~requirements};
-\node[color=red,align=left] at (1.25,0)   {Multiple~levels~of\\checkings~ensure\\paramount~quality\\~\\~\\Otherwise~files\\push~back~to~the\\production~team\\for~modification};
-\node[color=red,align=left] at (1.3,-1.1) {Directory~structures,\\file~namings,~must\\be~as~per~delivery\\protocol,~confirmed\\by~client};
+\node[color=black,align=left] at (1.3,4)    {Ensure~completeness\\of~the~receipt~files};
+\node[color=black,align=left] at (1.3,1.85) {Checking~visual\\rendation~of~coded\\files~in~browser\\by~linking~to~an~XSL\\file,~to~catch\\tagging~or~image\\related~errors\\easily\\~\\~\\Using~spell-checkers\\to~ensure~content\\with~paramount\\quality\\~\\~\\Validation~tools\\ensure~files~adhere\\to~the~requirements};
+\node[color=black,align=left] at (1.25,0)   {Multiple~levels~of\\checkings~ensure\\paramount~quality\\~\\~\\Otherwise~files\\push~back~to~the\\production~team\\for~modification};
+\node[color=black,align=left] at (1.3,-1.1) {Directory~structures,\\file~namings,~must\\be~as~per~delivery\\protocol,~confirmed\\by~client};
 
 
-\node[color=red,align=left] at (2.1,4)    {Email\\WinSCP\\Salamander};
-\node[color=red,align=left] at (2.3,2)    {FineReader\\Photoshop\\Epsilon\\oXygen XML Editor\\\getKey{vts}};
-\node[color=red,align=left] at (2.3,0)    {Epsilon\\oXygen XML Editor\\\getKey{vts}};
-\node[color=red,align=left] at (2.1,-1)   {Email\\WinSCP\\Salamander\\QMS};
+\node[color=black,align=left] at (2.1,4)    {Email\\WinSCP\\Salamander};
+\node[color=black,align=left] at (2.3,2)    {FineReader\\Photoshop\\Epsilon\\oXygen XML Editor\\\getKey{vts}};
+\node[color=black,align=left] at (2.3,0)    {Epsilon\\oXygen XML Editor\\\getKey{vts}};
+\node[color=black,align=left] at (2.1,-1)   {Email\\WinSCP\\Salamander\\QMS};
 
-\node[color=red,align=left] at (3.48,4)   {Communication~with~client\\sFTP~tool~for~downloading\\FTP~tool~for~downloading};
-\node[color=red,align=left] at (3.6,2)    {Text~extraction~tool\\Image~cropping~tool\\EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}};
-\node[color=red,align=left] at (3.6,0)    {EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}};
-\node[color=red,align=left] at (3.51,-1.05)  {Communication~with~client\\sFTP~tool~for~uploading\\FTP~tool~for~uploading\\Online~tool~for~tracking};
-\node[color=red,align=left] at (3.55,-2)  {Archive~the~data~and~backup\\kept~for~two~years~in~our\\local~NAS~server};
+\node[color=black,align=left] at (3.48,4)   {Communication~with~client\\sFTP~tool~for~downloading\\FTP~tool~for~downloading};
+\node[color=black,align=left] at (3.6,2)    {Text~extraction~tool\\Image~cropping~tool\\EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}};
+\node[color=black,align=left] at (3.6,0)    {EMacs~like~text~editor\\Advanced~XML~editing~tool\\\getKey{utl}};
+\node[color=black,align=left] at (3.51,-1.05)  {Communication~with~client\\sFTP~tool~for~uploading\\FTP~tool~for~uploading\\Online~tool~for~tracking};
+\node[color=black,align=left] at (3.55,-2)  {Archive~the~data~and~backup\\kept~for~two~years~in~our\\local~NAS~server};
 
 
 

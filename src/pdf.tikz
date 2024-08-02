@@ -62,31 +62,31 @@
 
 %floats
 
-\node[color=red,align=left] at (0.2,4)    {Input\\Scanning};
-\node[color=red,align=left] at (0.3,3.2)  {100\% Complete};
-\node[color=red,align=left] at (0.3,2.5)  {100\% Compliant\\as per\\project\\requirements};
-\node[color=red,align=left] at (0.2,1.75) {Error free\\report};
-\node[color=red,align=left] at (0.3,0)    {100\% sampling\\of data for\\possible errors};
-\node[color=red,align=left] at (0.2,-1)   {Error free\\files\\for\\delivery};
-\node[color=red,align=left] at (0.17,-2)  {Archive\\and\\Backup\\files\\post\\delivery};
+\node[color=black,align=left] at (0.2,4)    {Input\\Scanning};
+\node[color=black,align=left] at (0.3,3.2)  {100\% Complete};
+\node[color=black,align=left] at (0.3,2.5)  {100\% Compliant\\as per\\project\\requirements};
+\node[color=black,align=left] at (0.2,1.75) {Error free\\report};
+\node[color=black,align=left] at (0.3,0)    {100\% sampling\\of data for\\possible errors};
+\node[color=black,align=left] at (0.2,-1)   {Error free\\files\\for\\delivery};
+\node[color=black,align=left] at (0.17,-2)  {Archive\\and\\Backup\\files\\post\\delivery};
 
 
-\node[color=red,align=left] at (1.3,4)    {Ensure\\completeness\\of the\\receipt files};
-\node[color=red,align=left] at (1.2,2)    {Ensure\\error free\\files with\\multiple\\QC gates,\\during\\production};
-\node[color=red,align=left] at (1.2,0)    {Multiple\\Quality\\Checkings\\to ensure\\paramount\\Quality};
-\node[color=red,align=left] at (1.3,-1)   {Folder Structre\\Filenaming\\100\% Complete};
+\node[color=black,align=left] at (1.3,4)    {Ensure\\completeness\\of the\\receipt files};
+\node[color=black,align=left] at (1.2,2)    {Ensure\\error free\\files with\\multiple\\QC gates,\\during\\production};
+\node[color=black,align=left] at (1.2,0)    {Multiple\\Quality\\Checkings\\to ensure\\paramount\\Quality};
+\node[color=black,align=left] at (1.3,-1)   {Folder Structre\\Filenaming\\100\% Complete};
 
 
-\node[color=red,align=left] at (2.15,4)   {Email\\WinSCP\\Salamander};
-\node[color=red,align=left] at (2.2,2)    {Finereader\\Acrobat Pro\\Photoshop\\Epsilon\\Inhouse Tools\\Pitstop Pro\\XML Parser};
-\node[color=red,align=left] at (2.2,0)    {Acrobat Pro\\Photoshop\\Epsilon\\Inhouse Tools\\Pitstop Pro\\XML Parser};
-\node[color=red,align=left] at (2.15,-1)  {Email\\WinSCP\\Salamander\\QMS};
+\node[color=black,align=left] at (2.15,4)   {Email\\WinSCP\\Salamander};
+\node[color=black,align=left] at (2.2,2)    {Finereader\\Acrobat Pro\\Photoshop\\Epsilon\\Inhouse Tools\\Pitstop Pro\\XML Parser};
+\node[color=black,align=left] at (2.2,0)    {Acrobat Pro\\Photoshop\\Epsilon\\Inhouse Tools\\Pitstop Pro\\XML Parser};
+\node[color=black,align=left] at (2.15,-1)  {Email\\WinSCP\\Salamander\\QMS};
 
-\node[color=red,align=left] at (3.5,4)    {Complete source documents};
-\node[color=red,align=left] at (3.5,2.5)  {Compliance to conversion\\instructions and SLA\\requirements};
-\node[color=red,align=left] at (3.4,0)    {Compliance to SLA\\requirements};
-\node[color=red,align=left] at (3.5,-1)   {Successfully uploaded\\to client FTP};
-\node[color=red,align=left] at (3.45,-2)  {Archive and backup\\(kept for two years)};
+\node[color=black,align=left] at (3.5,4)    {Complete source documents};
+\node[color=black,align=left] at (3.5,2.5)  {Compliance to conversion\\instructions and SLA\\requirements};
+\node[color=black,align=left] at (3.4,0)    {Compliance to SLA\\requirements};
+\node[color=black,align=left] at (3.5,-1)   {Successfully uploaded\\to client FTP};
+\node[color=black,align=left] at (3.45,-2)  {Archive and backup\\(kept for two years)};
 
 
 
