@@ -1,0 +1,3 @@
+# Special settings for this directory.
+Extensions: .tikz
+mode: Latex
