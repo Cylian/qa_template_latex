@@ -46,7 +46,7 @@ pcsccxmspgb-olru,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,
 pcsccxmspus-hebr,Kishore Sarkar,graphics/lspl008,Santanu Dutta,graphics/lspl272,Q-01/13,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
 pcsccxmlnau-epub,Sujan Mistry,graphics/lspl012,Santanu Dutta,graphics/lspl272,Q-01/14,02,2024-01-04,Debashis Roy Chowdhury,src/epub.tikz,Firstedit\\Firstout\\Parser\\Utf8 Conversion\\Finalout\\Local Submission Checker\\Validator Program For Packages,$-$
 template,Sukhendu Pal,graphics/lspl011,Santanu Dutta,graphics/lspl272,Q-01/04,02,2024-01-04,Debashis Roy Chowdhury,src/xml.tikz,DBNL Parsing v1.02\\DBNL Edit\\XMLViewer\\Spellchecker\\GarbageCharCheck\\DBNL-XMLOutput,$-$
-pcsccxmtayf-ebkc,Somnath Das,graphics/lspl284,Santanu Dutta,graphics/lspl272,Q-03/07,03,2024-08-02,Debashis Roy Chowdhury,src/xml.tikz,Garbage Checker\\Parser Checker\\XML Metadata\\TFBITS Val Tool\\Reference Structure\\Linking Utility\\Image Cropping\\XML Stylesheet,$-$
+pcsccxmtayf-ebkc,Somnath Das,graphics/lspl284,Santanu Dutta,graphics/lspl272,Q-03/07,00,2024-08-05,Debashis Roy Chowdhury,src/xml_ebkc.tikz,Garbage Checker\\Parser Checker\\XML Metadata\\TFBITS Val Tool\\Reference Structure\\Linking Utility\\Image Cropping\\XML Stylesheet,$-$
 \end{filecontents*}
 \DTLloaddb
   [keys={prj,isn,iss,apn,aps,dcn,rev,dat,bpa,prf,vts,utl}]% <options>
@@ -261,13 +261,13 @@ Verification of all process documentations & {All documented procedures are appr
 \label{sec:qs}
 
 \begin{tiny}
-\begin{tblr}{colspec={|m{0.2\textwidth}|m{0.3\textwidth}|m{0.1\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
+\begin{tblr}{colspec={|m{0.2\textwidth}|m{0.32\textwidth}|m{0.1\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
 \textbf{Factor} & \textbf{Formula} & \textbf{Standard Target} \\
-Character Accuracy & $\frac{\sf (\char"0023\ of\ Sampled\ Character - \char"0023\ of\ Character\ in\ error)}{\sf \char"0023\ of\ sampled\ Character}$ & 99.995\% \\
+Character Accuracy & $\frac{\sf (\char"0023\ of\ sampled\ Characters - \char"0023\ of\ Characters\ in\ error)}{\sf \char"0023\ of\ sampled\ Characters}$ & 99.995\% \\
 %Critical Error Rate & $\frac{\sf \char"0023\ of\ Critical\ Error}{\sf \char"0023\ of\ Document}$ & See Below \\
-Structure / Coding Accuracy & $\frac{\sf (\char"0023\ of\ Sampled\ Character - \char"0023\ of\ Character\ in\ error)}{\sf \char"0023\ of\ sampled\ Character}$ & 100\% \\
-Image Accuracy & $\frac{\sf (\char"0023\ of\ Sampled\ Images - \char"0023\ of\ Image\ with\ error)}{\sf \char"0023\ of\ sampled\ Images}$ & 100\% \\
-Proofreading Accuracy & $\frac{\sf (\char"0023\ of\ Sampled\ Character - \char"0023\ of\ Character\ in\ error)}{\sf \char"0023\ of\ sampled\ Character}$ & 100\% \\
+Structure / Coding Accuracy & $\frac{\sf (100\%\ of\ sampled\ Characters - \char"0023\ of\ Characters\ in\ error)}{\sf 100\%\ of\ sampled\ Characters}$ & 100\% \\
+Image Accuracy & $\frac{\sf (100\%\ of\ sampled\ Images - \char"0023\ of\ Images\ with\ error)}{\sf 100\%\ of\ sampled\ Images}$ & 100\% \\
+Proofreading Accuracy & $\frac{\sf (50\%\ of\ sampled\ Characters - \char"0023\ of\ Characters\ in\ error)}{\sf 50\%\ of\ sampled\ Characters}$ & 100\% \\
 Validation reports / logs & -- & Error Free \\
 Folder Structure \& File Naming & -- & Error Free \\
 \end{tblr}
@@ -350,9 +350,10 @@ CAPA & Corrective and Preventive Action
 \begin{tiny}
 \begin{tblr}{colspec={|m{0.1\textwidth}|m{0.1\textwidth}|m{0.1\textwidth}|m{0.15\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
 \textbf{Revision State} & \textbf{Revision Date} & \textbf{Author} & \textbf{Revision Description} \\
-01 & 2024-07-22 & \getKey{apn} & Initial release \\
-02 & 2024-07-24 & \getKey{apn} & First Draft \\
-\getKey{rev} & \getKey{dat} & \getKey{apn} & Revised Draft
+00 & 2024-07-22 & \getKey{apn} & Initial release%% \\
+%01 & 2024-07-24 & \getKey{apn} & First Draft \\
+%02 & 2024-08-02 & \getKey{apn} & Revised Draft \\
+%%\getKey{rev} & \getKey{dat} & \getKey{apn} & Revised Draft
 \end{tblr}
 \end{tiny}
 
@@ -362,7 +363,7 @@ CAPA & Corrective and Preventive Action
 \begin{tiny}
 \begin{tblr}{colspec={|m{0.2\textwidth}|m{0.1\textwidth}|},hlines,vlines,row{odd}={green9},row{1}={bg=green4,fg=white},rowsep=0.5pt,colsep=0.5pt}
 \textbf{Reviewed by} & \textbf{Review Date} \\
-\getKey{bpa} & 2024-07-24 \\
+%%\getKey{bpa} & 2024-07-24 \\
 \getKey{bpa} & \getKey{dat}
 \end{tblr}
 \end{tiny}
